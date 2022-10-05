@@ -1,9 +1,9 @@
 {
-    "name": "webd6201-w2021-lab1",
+    "name": "webd5201-w2022-lab1",
   "version": "1.0.0",
   "description": "lab1",
   "main": "app.js",
-  "repository": "https://github.com/ospaghetti/WEBD5201-lab1",
+  "repository": "https://github.com/ospaghetti/WEBD5202-lab1",
   "author": "David Osagiede <david.osagiede@dcmail.ca>",
     "private": true,
     "scripts": {
