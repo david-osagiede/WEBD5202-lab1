@@ -1,8 +1,26 @@
-
-
 <?php
 use Illuminate\Support\Facades\Route;
-Route::get('/', 'App\http\Controllers\PostsController@index');
+
+
+// View => view()
+// Request => request()
+
+// App::bind('App\Billing\Stripe', function () {
+//     return new \App\Billing\Stripe(config('services.stripe.secret'));
+// });
+// App::singleton('App\Billing\Stripe', function () {
+//     return new \App\Billing\Stripe(config('services.stripe.secret'));
+// });
+// $stripe = App::make('App\Billing\Stripe');
+
+// $stripe = resolve('App\Billing\Stripe');
+// // $stripe = instance('App\Billing\Stripe');
+
+// dd($stripe);
+
+// dd(resolve('App\Billing\Stripe'));
+
+Route::get('/', 'App\http\Controllers\PostsController@index')->name('home');
 
 Route::get('/david', 'App\http\Controllers\PostsController@index');
 
@@ -13,7 +31,21 @@ Route::get('/posts/create', 'App\http\Controllers\PostsController@create');
 Route::post('/posts', 'App\http\Controllers\PostsController@store');
 
 Route::get('/posts/{post}', 'App\http\Controllers\PostsController@show');
+
+Route::get('/posts/tag/{tag}', 'TagsController@index');
+
+
 Route::post('/posts/{post}/comments', 'App\http\Controllers\CommentsController@store');
+
+Route::get('/register', 'App\http\Controllers\RegistrationController@create');
+
+Route::post('/register', 'App\http\Controllers\RegistrationController@store');
+
+Route::get('/login', 'App\http\Controllers\SessionsController@create');
+
+Route::post('/login', 'App\http\Controllers\SessionsController@store');
+
+Route::get('/logout', 'App\http\Controllers\SessionsController@destroy');
 // use App\Models\task;
 // use App\http\Controllers\TasksController;
 // Route::get('/tasks', 'App\http\Controllers\TasksController@index');

@@ -104,6 +104,8 @@
     border-radius: 2rem;
   }
 
+
+
   /*
    * Blog posts
    */
@@ -128,6 +130,13 @@
     text-align: center;
     background-color: #f9f9f9;
     border-top: .05rem solid #e5e5e5;
+  }
+
+  #flash-message {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
   }
   .blog-footer p:last-child {
     margin-bottom: 0;
